@@ -73,7 +73,7 @@ RPC is a protocol that allows a program to send requests to another program to e
 </ul>
 
 
-How to gRPC Work
+<h2> How to gRPC Work </h2>
 <ul>
 <li>
 <strong>Defining the service interface:</strong> Developers define the service interface and message types using the Protocol Buffers language. This defines the structure of messages and the methods that can be called on the server.
