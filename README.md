@@ -1,4 +1,3 @@
-# grpc-app
 
 <h2> What is gRPC </h2>
 
