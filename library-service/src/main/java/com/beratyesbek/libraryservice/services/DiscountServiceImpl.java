@@ -6,6 +6,7 @@ import com.beratyesbek.libraryservice.dto.DiscountApiResponse;
 import com.beratyesbek.libraryservice.entities.DbBook;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.configurationprocessor.json.JSONException;
 import org.springframework.boot.configurationprocessor.json.JSONObject;
 import org.springframework.http.*;
@@ -18,7 +19,12 @@ import java.util.Map;
 
 @Service
 public class DiscountServiceImpl implements DiscountService {
-    private final String uri = "http://localhost:8081/api/discount/getDiscount";
+    private StringBuilder uri;
+
+    public DiscountServiceImpl(@Value("${discount.api.host}") String host, @Value("${discount.api.port}") int port) {
+        uri = new StringBuilder("http://" + host + ":" + port + "/api/discount/getDiscount");
+
+    }
 
     @Override
     public DiscountApiResponse getDiscount(DbBook dbBook, String code) {
@@ -40,7 +46,7 @@ public class DiscountServiceImpl implements DiscountService {
         HttpEntity<Map<String, Object>> entity = new HttpEntity<>(map, headers);
 
 
-        ResponseEntity response = restTemplate.exchange(uri, HttpMethod.POST, entity, DiscountApiResponse.class);
+        ResponseEntity response = restTemplate.exchange(uri.toString(), HttpMethod.POST, entity, DiscountApiResponse.class);
         if (response.getStatusCode() == HttpStatus.OK) {
             return (DiscountApiResponse) response.getBody();
         } else {

@@ -1,4 +1,4 @@
-package com.beratyesbek.discountservice.grpcClient;
+package com.beratyesbek.discountservice.grpcclient;
 
 import com.beratyesbek.discountservice.dao.DiscountDao;
 import com.beratyesbek.discountservice.entities.DbDiscount;
@@ -36,6 +36,7 @@ public class DiscountGrpcServiceImpl extends DiscountServiceGrpc.DiscountService
                     .setOldPrice(request.getPrice())
                     .build();
         }
+
         responseObserver.onNext(discountResponse);
         responseObserver.onCompleted();
         super.getDiscount(request, responseObserver);

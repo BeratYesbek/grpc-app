@@ -36,7 +36,12 @@ dependencies {
 	implementation "io.grpc:grpc-netty:${grpcVersion}"
 	implementation "io.grpc:grpc-protobuf:${grpcVersion}"
 	implementation "io.grpc:grpc-stub:${grpcVersion}"
+
 	implementation 'net.devh:grpc-server-spring-boot-starter:2.14.0.RELEASE'
+
+
+
+	implementation 'io.micrometer:micrometer-core:1.10.5'
 
 }
 

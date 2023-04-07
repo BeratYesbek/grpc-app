@@ -1,4 +1,4 @@
-package com.beratyesbek.libraryservice.grpcServer;
+package com.beratyesbek.libraryservice.grpcserver;
 
 import com.beratyesbek.grpc.DiscountResponse;
 import com.beratyesbek.libraryservice.entities.DbBook;

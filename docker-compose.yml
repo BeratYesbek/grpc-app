@@ -41,23 +41,6 @@ services:
       - postgres-volume:/var/lib/postgresql/data
     command: -p 54323
 
-  library_service:
-    image: 'library_service'
-    container_name: library_service
-    build:
-      context: .
-      dockerfile: Dockerfile
-    depends_on:
-      - library_postgres
-    environment:
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://library_postgres:54323/libraryDb
-      - SPRING_DATASOURCE_USERNAME=user
-      - SPRING_DATASOURCE_PASSWORD=user123
-      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
-      - SPRING_JPA_HIBERNATE_DIALECT=org.hibernate.dialect.PostgreSQLDialect
-    ports:
-      - "8081:8080"
-
 
 volumes:
   postgres-volume:
