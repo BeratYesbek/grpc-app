@@ -1,4 +1,4 @@
-package com.beratyesbek.discountservice.grpcclient;
+package com.beratyesbek.discountservice.grpc;
 
 import com.beratyesbek.discountservice.dao.DiscountDao;
 import com.beratyesbek.discountservice.entities.DbDiscount;

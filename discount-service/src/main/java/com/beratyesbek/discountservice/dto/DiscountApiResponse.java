@@ -1,6 +1,5 @@
 package com.beratyesbek.discountservice.dto;
 
-import com.beratyesbek.grpc.Response;
 import lombok.Builder;
 import lombok.Getter;
 

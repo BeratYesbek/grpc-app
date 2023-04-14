@@ -4,11 +4,8 @@ import com.beratyesbek.discountservice.dao.DiscountDao;
 import com.beratyesbek.discountservice.dto.DiscountApiRequest;
 import com.beratyesbek.discountservice.dto.DiscountApiResponse;
 import com.beratyesbek.discountservice.entities.DbDiscount;
-import com.beratyesbek.grpc.DiscountRequest;
-import com.beratyesbek.grpc.DiscountResponse;
-import com.beratyesbek.grpc.Response;
+
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

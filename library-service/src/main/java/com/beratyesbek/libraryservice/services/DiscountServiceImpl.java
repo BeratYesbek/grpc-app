@@ -4,16 +4,13 @@ import com.beratyesbek.grpc.DiscountResponse;
 import com.beratyesbek.grpc.Response;
 import com.beratyesbek.libraryservice.dto.DiscountApiResponse;
 import com.beratyesbek.libraryservice.entities.DbBook;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.configurationprocessor.json.JSONException;
-import org.springframework.boot.configurationprocessor.json.JSONObject;
+
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 

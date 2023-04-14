@@ -4,7 +4,7 @@ import com.beratyesbek.grpc.DiscountResponse;
 import com.beratyesbek.libraryservice.dao.BookDao;
 import com.beratyesbek.libraryservice.dto.DiscountApiResponse;
 import com.beratyesbek.libraryservice.entities.DbBook;
-import com.beratyesbek.libraryservice.grpcserver.DiscountGrpcService;
+import com.beratyesbek.libraryservice.grpc.DiscountGrpcService;
 import com.beratyesbek.libraryservice.services.DiscountService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
